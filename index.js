@@ -121,7 +121,7 @@ async function deleteMessageWrapper(auth) {
     )
   );
   const batchLimit = 50;
-  const filteringList = getFilterList("filterlist.text");
+  const filteringList = getFilterList("filters.text");
   let finalResult = [];
   let result = await filteringList.forEach(async (item) => {
     let result = await getMessagesByFilter(auth, item);
